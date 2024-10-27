@@ -1,93 +1,114 @@
 /* Styles par défaut pour la section featured */
 .featured-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Disposition mobile et tablette */
+@media (max-width: 1024px) {
+  .featured-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .featured-text, .featured-image {
+    width: 100%;
+  }
+
+  /* Texte de présentation */
+  .featured-name {
+    font-size: 26px;
+  }
+
+  /* Boutons "Hire Me" et "Download CV" */
+  .featured-text-btn {
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Icônes des réseaux sociaux */
+  .social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  /* Image de profil */
+  .image img {
+    width: 180px; /* Taille ajustée pour mobile/tablette */
+    height: auto;
+    border-radius: 50%;
+    margin: 10px auto;
+  }
+
+
+
+   /* Icônes des réseaux sociaux */
+   .social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  /* Bouton "Scroll Down" */
+  .scroll-icon-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .scroll-btn {
+    display: inline-flex;
     align-items: center;
-    padding: 20px;
+    gap: 5px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
   }
-  
-  /* Disposition mobile et tablette */
-  @media (max-width: 1024px) {
-    .featured-box {
-      flex-direction: column;
-      text-align: center;
-      padding: 10px;
-    }
-  
-    .featured-text, .featured-image {
-      width: 100%;
-    }
-  
-    /* Texte de présentation */
-    .featured-name {
-      font-size: 26px;
-    }
-  
-    /* Boutons "Hire Me" et "Download CV" */
-    .featured-text-btn {
-      margin-top: 10px;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-    }
-  
-    /* Icônes des réseaux sociaux */
-    .social_icons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
-      font-size: 20px;
-    }
-  
-    /* Image de profil */
-    .image img {
-      width: 180px; /* Taille ajustée pour mobile/tablette */
-      height: auto;
-      border-radius: 50%;
-      margin: 10px auto;
-    }
-  
-    /* Bouton "Scroll Down" */
-    .scroll-icon-box {
-      margin-top: 20px;
-      text-align: center;
-    }
-  
-    .scroll-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      color: #333;
-      font-size: 16px;
-      text-decoration: none;
-    }
-  
-    /* Icône de défilement */
-    .scroll-btn i {
-      font-size: 24px; /* Ajusté pour mobile et tablette */
-    }
+
+  /* Icône de défilement */
+  .scroll-btn i {
+    font-size: 24px; /* Ajusté pour tablette */
   }
+}
+
+/* Disposition mobile */
+@media (max-width: 768px) {
   
-  /* Spécifique aux mobiles (jusqu'à 768px) */
-  @media (max-width: 768px) {
-    .featured-text-info {
-      font-size: 14px;
-      padding: 0 10px;
-    }
-  
-    .social_icons {
-      font-size: 18px;
-      gap: 10px;
-    }
-  
-    /* Ajustement du bouton de défilement */
-    .scroll-icon-box {
-      margin-bottom: 20px;
-    }
-  
-    .scroll-btn p {
-      font-size: 14px;
-    }
+  /* Icônes des réseaux sociaux */
+  .social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
   }
-  
+
+  /* Ajustement du bouton de défilement */
+  .scroll-icon-box {
+    margin-bottom: 20px;
+  }
+
+  .scroll-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .scroll-btn i {
+    font-size: 20px; /* Ajusté pour mobile */
+  }
+
+}
