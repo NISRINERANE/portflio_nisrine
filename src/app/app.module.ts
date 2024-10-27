@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
@@ -17,7 +16,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     HeroComponent,
-    AboutComponent,
     SkillsComponent,
     ProjectsComponent,
     ContactsComponent,

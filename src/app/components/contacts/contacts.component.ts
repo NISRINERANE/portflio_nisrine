@@ -19,6 +19,16 @@ export class ContactsComponent {
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const message = (document.getElementById('message') as HTMLTextAreaElement).value;
 
+    // Check if any input is empty
+    if (!name || !email || !message) {
+      Swal.fire({
+        title: 'Champs obligatoires',
+        text: 'Veuillez remplir tous les champs avant d\'envoyer le message.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+      });
+      return; // Stop the function if inputs are empty
+    }
     const templateParams = {
       from_name: name,
       from_email: email,
