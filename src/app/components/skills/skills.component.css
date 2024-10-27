@@ -1,0 +1,40 @@
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Pour centrer l'ensemble des cartes */
+  gap: 10px; /* Réduit l’espace entre les cartes */
+  max-width: 1000px; /* Ajuste cette valeur pour une limite sur la largeur totale */
+  margin: 0 auto; /* Centre la stack dans la section */
+}
+
+.tech-card {
+  text-align: center;
+  margin: 5px; /* Réduit encore l’espacement entre les cartes */
+  width: calc(100% / 8 - 10px); /* Assure 8 cartes par ligne */
+}
+
+.tech-card i {
+  font-size: 50px; /* Ajuste selon la taille de l'icône désirée */
+}
+/* Vue Tablette */
+@media (max-width: 1024px) {
+  .tech-card {
+    flex: 1 1 calc(33.33% - 20px); /* Affiche jusqu'à 3 cartes par ligne */
+  }
+}
+
+/* Vue Mobile */
+@media (max-width: 768px) {
+  .tech-stack {
+    gap: 10px; /* Réduit l’espace entre les cartes pour mobile */
+  }
+
+  .tech-card {
+    flex: 1 1 calc(50% - 10px); /* Affiche jusqu'à 2 cartes par ligne en mode mobile */
+    max-width: 150px;
+  }
+
+  .tech-card i {
+    font-size: 40px; /* Ajuste la taille des icônes pour mobile */
+  }
+}

@@ -1,0 +1,38 @@
+<nav id="header" >
+    <div class="nav-logo">
+        <p class="nav-name">Nisrine</p>
+        <span>.</span>
+    </div>
+    <div class="nav-menu" [class.responsive]="isMenuOpen" id="myNavMenu">
+        <ul class="nav_menu_list">
+            <li class="nav_list">
+                <a (click)="navigateTo('home')" class="nav-link">Home</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a (click)="navigateTo('skill')" class="nav-link">Tech-stack</a>
+                <div class="circle"></div>
+            </li> 
+            <li class="nav_list">
+                <a (click)="navigateTo('projects')" class="nav-link">Projects</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a (click)="navigateTo('contact')" class="nav-link">Contact</a>
+                <div class="circle"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-button">
+        <a href="https://bit.ly/4eVbMpR" class="btn">Download CV <i class="uil uil-file-alt"></i></a>
+    </div>
+
+    <!-- Toggle Theme Button -->
+  <button class="theme-toggle-btn" aria-label="Toggle theme" (click)="toggleTheme()">
+    <i class="fas" [class.fa-sun]="!isDarkTheme" [class.fa-moon]="isDarkTheme"></i>
+</button>
+      
+    <div class="nav-menu-btn">
+        <i class="uil uil-bars" (click)="toggleMenu()"></i>
+    </div>
+</nav>

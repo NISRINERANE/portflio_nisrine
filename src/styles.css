@@ -1,1 +1,1140 @@
-/* You can add global styles to this file, and also import other style files */
+/* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- VARIABLES ----- */
+:root{
+    --body-color: #F2EFE9; /* basé sur bg-100 */
+    --color-white: #cee8ff; /* basé sur text-100 */
+    
+    --text-color-second: #374357; /* basé sur text-200 */
+    --text-color-third: #4c5187; /* basé sur accent-100 */
+    
+    --first-color: #0F1C2E; /* basé sur primary-200 */
+    --first-color-hover: #3D5A80; /* basé sur primary-100 */
+    
+    --second-color: #1f2b3e; /* basé sur primary-300 */
+    --third-color: #374357; /* basé sur primary-300 */
+    --first-shadow-color: rgba(0, 0, 0, 0.1); /* inchangé */
+    
+
+    
+}
+
+/* ----- BASE ----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- SMOOTH SCROLL ----- */
+html{
+    scroll-behavior: smooth;
+}
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #bbb;
+}
+
+
+/* ---##-- REUSABLE CSS --##--- */
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
+.btn{
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #ebe2cd;;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    color: #1F3A5F;
+}
+.btn>i{
+    margin-left: 10px;
+}
+.btn:hover{
+    background: var(--second-color);
+    color: var(--color-white);
+}
+
+/* ----- GLOBAL ICONS DESIGN ----- */
+i{
+    font-size: 16px;
+}
+
+/* ------- BASE -------- */
+body{
+    background: var(--body-color);
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+
+/* ----- NAVIGATION BAR ----- */
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--body-color);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+.nav-logo{
+   position: relative;
+}
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+.nav-menu, .nav_menu_list{
+    display: flex;
+}
+.nav-menu .nav_list{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn i{
+    font-size: 28px;
+    cursor: pointer;
+}
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3;
+}
+.active-link::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+
+/* ----- WRAPPER DESIGN ----- */
+.wrapper{
+    padding-inline: 10vw;
+}
+
+/* ----- FEATURED BOX ----- */
+.featured-box{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+}
+
+/* ----- FEATURED TEXT BOX ----- */
+.featured-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 20px;
+}
+.featured-text-card span{
+    background: var(--third-color);
+    color: var(--color-white);
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.featured-name{
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-block: 20px;
+}
+.typedText{
+    text-transform: capitalize;
+    color: var(--text-color-third);
+}
+.featured-text-info{
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--text-color-second);
+}
+.featured-text-btn{
+    display: flex;
+    gap: 20px;
+}
+.featured-text-btn>.blue-btn{
+    background: var(--first-color);
+    color: var(--color-white);
+}
+.featured-text-btn>.blue-btn:hover{
+    background: var(--first-color-hover);
+}
+.social_icons{
+    display: flex;
+    margin-top: 5em;
+    gap: 30px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.icon:hover{
+    color: var(--first-color);
+}
+
+/* ----- FEATURED IMAGE BOX ----- */
+.featured-image{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+}
+.image{
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.image img{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+@keyframes imgFloat {
+    50%{
+        transform: translateY(10px);
+        border-radius: 45% 55% 45% 55%;
+    }
+}
+
+
+.scroll-btn{
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   translate: -50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 150px;
+   height: 50px;
+   gap: 5px;
+   text-decoration: none;
+   color: var(--text-color-second);
+   background: var(--color-white);
+   border-radius: 30px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.scroll-btn i{
+    font-size: 20px;
+}
+
+/* ----- MAIN BOX ----- */
+.section{
+    padding-block: 5em;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col{
+    display: flex;
+    width: 50%;
+}
+
+/* -- ## --- RESUABLE CSS -- ## -- */
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 10px;
+}
+.top-header span{
+    color: #999;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+/* ----- ABOUT INFO ----- */
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border-radius: 20px;
+}
+.about-info p{
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+.about-btn button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: var(--first-color);
+    color: var(--color-white);
+    border-radius: 30px;
+}
+.about-btn button:hover{
+    background: var(--first-color-hover);
+}
+
+/* ----- ABOUT / SKILLS BOX ----- */
+.skills-box{
+    margin: 10px;
+}
+.skills-header{
+    margin-bottom: 30px;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.skills-list span{
+    font-size: 14px;
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+/* ----- PROJECTS BOX ----- */
+.project-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.project-box>i{
+    font-size: 50px;
+    color: #b4c7dd;
+    margin-bottom: 25px;
+}
+.project-box label{
+    font-size: 15px;
+    color: #777;
+}
+.project-box::after, .contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: var(--second-color);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: 1;
+}
+.project-box:hover.project-box::after,
+.contact-info:hover.contact-info::after{
+    bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box>h3,
+.project-box:hover.project-box>label{
+    color: var(--color-white);
+    z-index: 2;
+}
+
+/* ----- CONTACT BOX ----- */
+.contact-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 315px;
+    background: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.contact-info>h2{
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+.contact-info>p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-white);
+    margin-block: 5px;
+}
+.contact-info p>i{
+    font-size: 18px;
+}
+.contact-info::after{
+    background: var(--color-white);
+}
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover.contact-info i{
+    color: #777;
+    z-index: 2;
+}
+
+/* ----- CONTACT FORM ----- */
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.form-inputs{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.input-field{
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding-inline: 20px;
+    outline: none;
+}
+textarea{
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding: 15px 20px;
+    outline: none;
+    resize: none;
+}
+.form-button>.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+    color: var(--color-white);
+}
+.form-button>.btn:hover{
+    background: #363c4e;
+}
+.form-button i{
+    font-size: 18px;
+    rotate: -45deg;
+}
+
+/* ----- FOOTER BOX ----- */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #ebe2cd;;
+    padding-block: 40px 60px;
+    text-decoration: solid;
+    color-scheme: #1F3A5F;
+
+    --primary-100:#1F3A5F;
+    --primary-200:#4d648d;
+    --primary-300:#acc2ef;
+    --accent-100:#3D5A80;
+    --accent-200:#cee8ff;
+    --text-100:#FFFFFF;
+    --text-200:#e0e0e0;
+    --bg-100:#0F1C2E;
+    --bg-200:#1f2b3e;
+    --bg-300:#374357;
+}
+.top-footer p{
+    font-size: 25px;
+    font-weight: 600;
+}
+.middle-footer .footer-menu{
+    display: flex;
+}
+.footer_menu_list{
+    list-style: none;
+}
+.footer_menu_list a{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    margin-inline: 20px;
+}
+.footer-social-icons{
+    display: flex;
+    gap: 30px;   
+}
+.bottom-footer{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
+@media only screen and (max-width: 1024px){
+    .featured-text{
+        padding: 0;
+    }
+    .image, .image img{
+        width: 320px;
+        height: 320px;
+    }
+}
+
+/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
+@media only screen and (max-width: 900px) {
+    .nav-button{
+        display: none;
+    }
+   
+    .nav-menu.responsive {
+    left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .featured-box{
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    .featured-text{
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 60vh;
+    }
+    .social_icons{
+        margin-top: 2em;
+    }
+    .featured-image{
+        order: 1;
+        justify-content: center;
+        min-height: 150px;
+        width: 100%;
+        margin-top: 65px;
+    }
+    .image, .image img{
+        width: 150px;
+        height: 150px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-info, .contact-info{
+        width: 100%;
+    }
+    .project-container{
+        justify-content: center;
+    }
+    .project-box{
+        width: 80%;
+    }
+
+}
+
+/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+
+@media only screen and (max-width: 540px){
+    .featured-name{
+        font-size: 40px;
+    }
+    .project-box{
+        width: 100%;
+    }
+    .form-inputs{
+        flex-direction: column;
+    }
+    .input-field{
+        width: 100%;
+    }
+}
+
+body {
+            background-color: #ebe5e5;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tech-card {
+            background-color: #0F1C2E;
+            border-radius: 10px;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+
+           
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tech-card i {
+            font-size: 40px;
+        }
+
+        .tech-card p {
+            margin: 10px 0 0;
+            font-size: 1.1em;
+        }
+
+        
+        
+
+
+    /* Style du bouton de bascule de thème */
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color-second);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+    margin-left: 1em; /* Pour espacer du CV download */
+}
+
+.theme-toggle-btn i {
+    transition: transform 0.3s;
+}
+
+.theme-toggle-btn:hover i {
+    transform: rotate(20deg);
+}
+
+/* Adaptation du bouton dans la barre de navigation */
+.nav-menu, .nav_menu_list, .theme-toggle-btn {
+    display: flex;
+    align-items: center;
+}
+
+/* Média query pour réduire la taille sur mobile */
+@media screen and (max-width: 768px) {
+    .theme-toggle-btn {
+        font-size: 20px;
+    }
+}
+
+
+
+/*sombre*/
+
+
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+    background-color: #404869; /* Couleur de fond sombre */
+    color: white; /* Couleur du texte sombre */
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e ;/* Couleur de fond sombre pour la barre de navigation */
+}
+
+
+
+/* projects */
+body.dark-mode {
+    background-color: #2C3A4F; /* Couleur de fond sombre */
+    color: white; /* Couleur du texte sombre */
+    
+}
+
+body.dark-mode .projects {
+    background-color: #2C3A4F; /* Couleur de fond sombre pour la section des projets */
+}
+
+body.dark-mode .project-card {
+    background-color: #43536c;/* Couleur de fond sombre pour les cartes de projet */
+    color: #ffffff; /* Couleur du texte sombre pour les cartes */
+}
+
+body.dark-mode .project-title {
+    color: #b6afa7;/* Couleur du titre sombre */
+}
+
+body.dark-mode .project-description {
+    color:  #c4baae; /* Couleur de la description sombre */
+}
+
+body.dark-mode .project-tags span {
+    background-color: #6f7f9a!important; /* Couleur de fond des étiquettes sombre */
+    color: #1F3A5F !important; /* Couleur du texte des étiquettes sombre */
+}
+
+body.dark-mode .project-content a {
+    color:  #b6afa7 !important; /* Couleur du lien en mode sombre */
+}
+
+body.dark-mode .project-content a:hover {
+    color: #926b6a !important; /* Couleur du lien au survol en mode sombre */
+}
+
+
+
+
+
+
+
+/*featured*/
+/* Styles pour le mode sombre */
+body.dark-mode .featured-text {
+    
+    color: white; /* Couleur du texte sombre */
+}
+
+body.dark-mode .featured-text-card span {
+    background: #56647b; /* Couleur de fond des spans en mode sombre */
+    color: var(--color-white); /* Couleur du texte des spans */
+}
+
+body.dark-mode .featured-name {
+    color: #D2B48C;/* Couleur du nom en mode sombre */
+}
+
+body.dark-mode .typedText {
+    color: #D3D3D3; /* Couleur du texte tapé en mode sombre */
+}
+
+body.dark-mode .featured-text-info {
+    color: #B0B0B0; /* Couleur des infos en mode sombre */
+}
+
+body.dark-mode .featured-text-btn>.blue-btn {
+    background: #D2B48C;/* Couleur du bouton en mode sombre */
+    color: #1F3A5F;  /* Couleur du texte du bouton */
+}
+
+body.dark-mode .featured-text-btn>.blue-btn:hover {
+    background: #D3D3D3; /* Couleur du bouton au survol en mode sombre */
+    color: #1F3A5F; 
+}
+
+body.dark-mode .social_icons {
+    margin-top: 5em; /* Garde le même espacement */
+    gap: 30px;
+}
+
+/* Ajoutez d'autres styles de mode sombre selon les besoins */
+
+
+/* Styles pour le mode sombre de .top-header */
+/* Couleur du h1 en mode sombre */
+body.dark-mode .top-header h1 {
+    color: #ffecda; /* Couleur du h1 en mode sombre */
+}
+
+/* Styles pour le mode sombre des icônes sociales */
+body.dark-mode .social_icons {
+     /* Couleur de fond sombre pour le conteneur des icônes */
+    padding: 1em; /* Ajoute un peu d'espace autour des icônes si nécessaire */
+    border-radius: 8px; /* Arrondit les coins du conteneur */
+}
+
+body.dark-mode .social_icons .icon {
+    color: #D2B48C; /* Couleur des icônes en mode sombre */
+    transition: color 0.3s; /* Ajoute une transition douce pour le changement de couleur */
+}
+
+body.dark-mode .social_icons .icon:hover {
+    color: #704c46; /* Couleur des icônes au survol en mode sombre */
+}
+
+
+/* Styles pour le mode sombre du footer */
+body.dark-mode footer {
+    background: #202a3a; /* Couleur de fond sombre */
+    color: #FFFFFF !important; /* Couleur du texte en mode sombre */
+}
+
+body.dark-mode footer p,
+body.dark-mode footer a,
+body.dark-mode .footer-menu a {
+    color: #d8c0a2 !important; /* Couleur du texte pour les paragraphes et les liens en mode sombre */
+}
+
+body.dark-mode .footer-social-icons .icon {
+    color: #1F3A5F !important; /* Couleur des icônes sociales en mode sombre */
+}
+
+body.dark-mode .footer-social-icons .icon:hover {
+    color: #918a77 !important; /* Couleur au survol des icônes sociales en mode sombre */
+}
+
+
+/* Styles pour le mode sombre de la navbar */
+body.dark-mode #header {
+    background-color: #2C3A4F; /* Couleur de fond sombre */
+    color: #c4bcab; /* Couleur du texte en mode sombre */
+}
+
+body.dark-mode .nav-link {
+    color: #c4bcab; /* Couleur des liens en mode sombre */
+}
+
+body.dark-mode .nav-link:hover {
+    color: #D2B48C; /* Couleur des liens au survol en mode sombre */
+}
+
+body.dark-mode .nav-name {
+    color: #fae2b5; /* Couleur du nom en mode sombre */
+}
+
+body.dark-mode .circle {
+    background-color: #2C3A4F !important; /* Couleur des cercles en mode sombre */
+}
+
+/* Couleur du bouton de téléchargement */
+body.dark-mode .btn {
+    background-color: ede4d3;/* Couleur de fond du bouton en mode sombre */
+    color: #666060; /* Couleur du texte du bouton en mode sombre */
+}
+
+body.dark-mode .btn:hover {
+    background-color: #D2B48C; /* Couleur de fond du bouton au survol en mode sombre */
+}
+
+/* Styles pour le bouton de changement de thème */
+body.dark-mode .theme-toggle-btn {
+    background-color: #2C3A4F; /* Couleur de fond du bouton de thème */
+    color: #c4bcab; /* Couleur de l'icône */
+}
+
+
+/* Fichier styles.css ou dans votre fichier contacts.component.css */
+
+/* Personnaliser le style de SweetAlert2 */
+.swal2-popup {
+    background-color: #cec3b8 !important; /* Couleur de fond */
+    color: #2C3A4F !important; /* Couleur du texte */
+    border-radius: 10px; /* Bordure arrondie */
+    box-shadow: 0 0 30px rgba(24, 22, 34, 0.5); /* Ombre */
+}
+
+.swal2-title {
+    font-size: 1.5rem; /* Taille de la police du titre */
+    font-weight: bold; /* Gras */
+}
+
+.swal2-content {
+    font-size: 1.2rem; /* Taille de la police du contenu */
+}
+
+.swal2-confirm {
+    background-color: #2C3A4F !important; /* Couleur de fond du bouton */
+    color: #ffffff !important; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    padding: 10px 20px; /* Padding */
+    font-size: 1rem; /* Taille de la police */
+}
+
+/* Changer la couleur du bouton au survol */
+.swal2-confirm:hover {
+    background-color: #4d6080 !important; /* Couleur de fond au survol */
+}
+
+
+
+/* ---##-- MEDIA QUERIES --##--- */
+
+/* Mode Mobile (largeur maximale de 768px) */
+@media (max-width: 768px) {
+    
+    /* Ajustement de la navigation */
+    nav {
+        padding-inline: 5vw;
+        height: 70px;
+        line-height: 70px;
+    }
+    .nav-name {
+        font-size: 24px;
+    }
+    .nav-menu {
+        display: none; /* Cache le menu principal */
+    }
+    .nav-menu-btn {
+        display: block; /* Affiche l'icône de menu pour mobile */
+        font-size: 20px;
+        line-height: 70px;
+    }
+
+    /* Wrapper et container */
+    .wrapper {
+        padding-inline: 5vw;
+    }
+    .container {
+        width: 100%;
+    }
+
+    /* Box Mise en avant */
+    .featured-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        min-height: 500px;
+    }
+    .featured-text,
+    .featured-image {
+        width: 100%;
+        padding-left: 0;
+    }
+    .featured-name {
+        font-size: 30px;
+    }
+    .featured-text-info {
+        font-size: 14px;
+    }
+
+    /* Image de présentation */
+    .image {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    /* Boutons */
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Section Compétences */
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px; /* Espacement entre les compétences */
+        justify-content: center;
+    }
+    .skill-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    /* Icônes des réseaux sociaux */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #333; /* Couleur de fond pour la visibilité */
+        color: #fff;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+
+    /* Section Projets */
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .project-box {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Section Contact */
+    .contact-info {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    /* Formulaire de contact */
+    .form-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .input-field {
+        width: 100%;
+    }
+    textarea {
+        height: 200px;
+    }
+
+    /* Bouton Scroll Down */
+    .scroll-down-btn {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 12px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .scroll-down-btn .icon {
+        font-size: 24px; /* Taille ajustée pour mobile */
+        margin-left: 5px;
+    }
+
+    /* Section Tech Stack */
+    .tech-stack {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes en mode mobile */
+        gap: 10px;
+        padding: 20px 5vw;
+    }
+    .tech-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .tech-icon {
+        font-size: 24px; /* Taille réduite de l'icône */
+        margin-bottom: 5px;
+    }
+}
+
+

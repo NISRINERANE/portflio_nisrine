@@ -1,0 +1,140 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F2F2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Project Section Styles */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #e8e8e8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Card Styles */
+.project-card {
+    display: flex;
+    flex-direction: column; /* Change la direction pour empiler verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem; /* Espace entre l'image et le contenu */
+}
+
+/* Project Image Styles */
+.project-image {
+    width: 180px; /* Controls image width */
+    max-height: 180px; /* Optional: to keep a consistent image height */
+    border-radius: 8px;
+    object-fit: cover; /* Ensures image maintains aspect ratio */
+}
+
+/* Project Content Styles */
+.project-content {
+    flex: 1; /* Prend l'espace restant dans la carte */
+    text-align: center; /* Centre le texte horizontalement */
+    margin: 0 auto; /* Marge automatique à gauche et à droite */
+}
+
+
+.project-title {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    color: #2C3E50;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #5c5c5c;
+}
+
+/* Tags Styles */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center; /* Centre les étiquettes horizontalement */
+    text-align: center; /* Centre le texte des étiquettes, mais n'est pas strictement nécessaire ici */
+}
+
+.project-tags span {
+    background-color: #b4c7dd;
+    color: #2C3E50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Project Link Styles */
+.project-content a {
+    color: #FF6347;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+    justify-content: center;
+    
+}
+
+.project-content a:hover {
+    color: #926b6a;
+}
+
+
+/*sombre*/
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+    background-color: #404869; /* Couleur de fond sombre */
+    color: white; /* Couleur du texte sombre */
+}
+
+body.dark-mode .projects {
+    background-color: #3c3c3c; /* Couleur de fond sombre pour la section des projets */
+}
+
+body.dark-mode .project-card {
+    background-color: #505050; /* Couleur de fond sombre pour les cartes de projet */
+    color: #ffffff; /* Couleur du texte sombre pour les cartes */
+}
+
+body.dark-mode .project-title {
+    color: #ffffff; /* Couleur du titre sombre */
+}
+
+body.dark-mode .project-description {
+    color: #cccccc; /* Couleur de la description sombre */
+}
+
+body.dark-mode .project-tags span {
+    background-color: #757575; /* Couleur de fond des étiquettes sombre */
+    color: white; /* Couleur du texte des étiquettes sombre */
+}
+
+body.dark-mode .project-content a {
+    color: #FF6347; /* Couleur du lien en mode sombre */
+}
+
+body.dark-mode .project-content a:hover {
+    color: #926b6a; /* Couleur du lien au survol en mode sombre */
+}
+

@@ -1,0 +1,30 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #ebe2cd;
+    padding-block: 40px 60px;
+    color: #1F3A5F; /* Change la couleur du texte ici */
+}
+
+footer p, footer a {
+    color: #1F3A5F; /* Spécifie la couleur du texte pour les paragraphes et les liens */
+}
+
+.footer-menu a {
+    color: #1F3A5F; /* Couleur des liens dans le menu footer */
+}
+
+.footer-social-icons .icon {
+    color: #FF6347; /* Couleur des icônes sociales */
+}
+
+.footer-social-icons .icon:hover {
+    color: #1F3A5F; /* Couleur au survol, optionnel */
+
+    
+}
+
+

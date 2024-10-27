@@ -35,9 +35,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/devicons/css/devicons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+               "node_modules/typed.js/dist/typed.umd.js",
+                "node_modules/scrollreveal/dist/scrollreveal.min.js"
+                
+            ]
           },
           "configurations": {
             "production": {
@@ -101,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a7c01de6-dfbc-4783-b882-f2c146ff1b83"
   }
 }
